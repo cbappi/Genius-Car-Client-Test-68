@@ -11,6 +11,7 @@ import AddService from './Pages/AddService/AddService';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import ManageServices from './Pages/ManageServices/ManageServices'
+import Order from './Pages/Order/Order';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        <Route path="/checkout" element={
+        <Route path="/checkout/:serviceId" element={
           <RequireAuth>
             <Checkout></Checkout>
           </RequireAuth>
@@ -39,6 +40,12 @@ function App() {
         <Route path="/manage" element={
           <RequireAuth>
             <ManageServices></ManageServices>
+          </RequireAuth>
+        }></Route> 
+
+        <Route path="/orders" element={
+          <RequireAuth>
+            <Order></Order>
           </RequireAuth>
         }></Route> 
 

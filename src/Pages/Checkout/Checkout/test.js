@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useServiceDetail from '../../../hooks/useServiceDetail';
@@ -10,11 +11,6 @@ const Checkout = () => {
     const {serviceId} = useParams();
     const [service] = useServiceDetail(serviceId);
     const [user] = useAuthState(auth);
-
-    if(user){
-
-        console.log(user)
-    }
     
     // const [user, setUser] = useState({
     //     name: 'Akbar The Great',
@@ -50,8 +46,6 @@ const Checkout = () => {
             }
         })
     }
-
-    //onSubmit={handlePlaceOrder}
 
     return (
         <div className='w-50 mx-auto'>
