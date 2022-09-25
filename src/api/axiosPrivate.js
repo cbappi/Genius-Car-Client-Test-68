@@ -9,7 +9,7 @@ axiosPrivate.interceptors.request.use(function (config) {
     }
     return config;
   }, function (error) {
-    // Do something with request error
+    // Do something with request error , now proceed
     return Promise.reject(error);
   });
 
